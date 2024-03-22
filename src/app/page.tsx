@@ -1,3 +1,7 @@
-export default function Home() {
-  return <main>main</main>
+import {memo} from 'react';
+
+function Home() {
+  return <div>main</div>;
 }
+
+export default memo(Home);
