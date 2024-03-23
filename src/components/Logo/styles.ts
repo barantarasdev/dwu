@@ -1,21 +1,17 @@
 'use client';
 
-import {IconButton, Typography, styled} from '@mui/material';
+import {Typography, styled} from '@mui/material';
+import Link from 'next/link';
 
-export const Button = styled(IconButton)({
+export const LogoButton = styled(Link)({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  color: 'inherit',
+  textDecoration: 'none',
 });
 
-export const Text = styled(Typography)(
-  ({
-    theme: {
-      palette: {text},
-    },
-  }) => ({
-    fontSize: 16,
-    fontWeight: 900,
-    color: text.primary,
-  }),
-);
+export const Text = styled(Typography)({
+  fontSize: 16,
+  fontWeight: 900,
+});

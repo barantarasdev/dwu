@@ -7,6 +7,38 @@ const createCommonTheme = (theme: Theme): Theme =>
   createTheme({
     ...theme,
     spacing: 5,
+    typography: {
+      h1: {
+        fontFamily: 'IBM Plex Serif',
+        fontSize: 32,
+        fontWeight: 600,
+        marginBottom: 20,
+      },
+      h2: {
+        color: '#FFF',
+        textAlign: 'center',
+        fontSize: 20,
+        fontWeight: 500,
+      },
+      h3: {
+        fontFamily: 'IBM Plex Serif',
+        fontSize: 18,
+        fontWeight: 600,
+        lineHeight: '27px',
+        marginBottom: 17,
+        display: '-webkit-box',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        '-webkit-line-clamp': '2',
+        '-webkit-box-orient': 'vertical',
+      },
+      subtitle1: {
+        fontSize: 15,
+        fontWeight: 400,
+        lineHeight: '165%',
+        marginBottom: 30,
+      },
+    },
     mixins: {
       flexCenter: {
         display: 'flex',
@@ -20,9 +52,11 @@ const createCommonTheme = (theme: Theme): Theme =>
         transform: 'translate(-50%, -50%)',
       },
       textEllipsis: {
+        display: '-webkit-box',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
+        '-webkit-line-clamp': '4',
+        '-webkit-box-orient': 'vertical',
       },
     },
     components: {
@@ -31,6 +65,13 @@ const createCommonTheme = (theme: Theme): Theme =>
           root: {
             padding: 0,
             height: '100%',
+          },
+        },
+      },
+      MuiIconButton: {
+        styleOverrides: {
+          root: {
+            margin: '0 !important',
           },
         },
       },

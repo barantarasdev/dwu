@@ -1,12 +1,14 @@
 import type {Metadata} from 'next';
-import {Inter} from 'next/font/google';
-import Navbar from '@/components/Navbar';
+import {Poppins} from 'next/font/google';
+import Header from '@/components/Header';
 import ThemeProvider from '@/common/themes/ThemeProvider';
 import ReduxProvider from '@/store/ReduxProvider';
 import {memo} from 'react';
 import {Container} from '@mui/material';
+import Footer from '@/components/Footer';
+import {Wrapper} from '@/styles';
 
-const inter = Inter({subsets: ['latin']});
+const poppins = Poppins({subsets: ['latin'], weight: ['400', '600', '700']});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,14 +21,17 @@ function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" style={{height: '100%'}}>
+      <body className={poppins.className} style={{height: '100%'}}>
         <ReduxProvider>
           <ThemeProvider>
-            <Navbar />
-            <Container>
-              <main>{children}</main>
-            </Container>
+            <Wrapper>
+              <Header />
+              <main style={{flex: '1 1 auto'}}>
+                <Container>{children}</Container>
+              </main>
+              <Footer />
+            </Wrapper>
           </ThemeProvider>
         </ReduxProvider>
       </body>

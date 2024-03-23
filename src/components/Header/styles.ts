@@ -4,12 +4,14 @@ import {
   List as MUIList,
   styled,
   Container as MUIContainer,
+  Box,
 } from '@mui/material';
 import Link from 'next/link';
 
-export const Content = styled('div')({
+export const Content = styled(Box)(({theme: {spacing}}) => ({
   backgroundColor: '#FFF',
-});
+  marginBottom: spacing(7),
+}));
 
 export const Container = styled(MUIContainer)({
   display: 'flex',

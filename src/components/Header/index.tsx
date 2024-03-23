@@ -1,10 +1,10 @@
 import {memo} from 'react';
-import * as Styled from '@/components/Navbar/styles';
+import * as Styled from '@/components/Header/styles';
 import Logo from '@/components/Logo';
-import List from '@/components/Navbar/components/List';
-import Actions from '@/components/Navbar/components/Actions';
+import List from '@/components/Header/components/List';
+import Actions from '@/components/Header/components/Actions';
 
-function Navbar() {
+function Header() {
   return (
     <Styled.Content>
       <Styled.Container>
@@ -16,4 +16,4 @@ function Navbar() {
   );
 }
 
-export default memo(Navbar);
+export default memo(Header);
