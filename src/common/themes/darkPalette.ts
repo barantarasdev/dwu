@@ -6,12 +6,16 @@ const darkPalette: Theme = createTheme({
     primary: {
       main: '#C31815',
     },
+    secondary: {
+      main: '#0E1E32',
+    },
     text: {
       primary: '#2A2A2A',
     },
     background: {
       default: '#F1F2F3',
     },
+    info: {main: '#FFF'},
   },
 });
 

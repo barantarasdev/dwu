@@ -1,22 +1,20 @@
-'use client';
-
-import {memo, useCallback} from 'react';
+import {memo} from 'react';
 import {LogoIcon} from '@/components/Images';
 import * as Styled from '@/components/Logo/styles';
-import {useRouter} from 'next/navigation';
+import {PATH} from '@/types';
 
-function Logo() {
-  const router = useRouter();
+type Props = {
+  color?: string;
+};
 
-  const onClick = useCallback(() => {
-    router.push('/');
-  }, [router]);
-
+function Logo({color}: Props) {
   return (
-    <Styled.Button onClick={onClick}>
+    <Styled.LogoButton href={PATH.HOME}>
       <LogoIcon />
-      <Styled.Text>DWU</Styled.Text>
-    </Styled.Button>
+      <Styled.Text variant="inherit" color={color}>
+        DWU
+      </Styled.Text>
+    </Styled.LogoButton>
   );
 }
 

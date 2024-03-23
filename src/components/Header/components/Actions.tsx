@@ -1,7 +1,7 @@
 import {Person, Search, Menu} from '@mui/icons-material';
 import {IconButton, ListItem} from '@mui/material';
 import {memo} from 'react';
-import * as Styled from '@/components/Navbar/styles';
+import * as Styled from '@/components/Header/styles';
 
 function Actions() {
   return (

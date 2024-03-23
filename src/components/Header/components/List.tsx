@@ -1,8 +1,8 @@
 import {memo} from 'react';
 import {LINKS} from '@/constants/links';
 import {ListItem} from '@mui/material';
-import * as Styled from '@/components/Navbar/styles';
-import Link from '@/components/Navbar/components/Link';
+import * as Styled from '@/components/Header/styles';
+import Link from '@/components/Header/components/Link';
 
 function List() {
   return (

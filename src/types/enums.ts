@@ -5,6 +5,7 @@ export enum PATH {
   WORLD = '/world',
   TRAVEL = '/travel',
   PODCASTS = '/podcasts',
+  HOME = '/',
 }
 
 export enum THEME {

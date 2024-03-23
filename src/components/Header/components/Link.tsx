@@ -1,7 +1,7 @@
 'use client';
 
 import {memo, useMemo} from 'react';
-import * as Styled from '@/components/Navbar/styles';
+import * as Styled from '@/components/Header/styles';
 import {PATH} from '@/types';
 import {usePathname} from 'next/navigation';
 import {Fade} from '@mui/material';
